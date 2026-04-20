@@ -1,29 +1,26 @@
 {
   "name": "revision_js",
   "version": "1.0.0",
-  "description": "",
-  "main": "day1.js",
-  "scripts": {
-    "start": "node question1.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devrahul7/revisionjs.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/devrahul7/revisionjs/issues"
-  },
-  "homepage": "https://github.com/devrahul7/revisionjs#readme",
-  "private": true,
+  "main": "day1.js",
   "devDependencies": {
     "@types/bun": "latest"
   },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+  "bugs": {
+    "url": "https://github.com/devrahul7/revisionjs/issues"
+  },
+  "description": "",
+  "homepage": "https://github.com/devrahul7/revisionjs#readme",
+  "keywords": [],
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "start": "node question1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "commonjs"
 }
