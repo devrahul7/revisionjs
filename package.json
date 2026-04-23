@@ -2,6 +2,7 @@
   "name": "revision_js",
   "version": "1.0.0",
   "author": "",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devrahul7/revisionjs.git"
@@ -22,5 +23,9 @@
     "start": "node question1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "commonjs"
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
+    "tsx": "^4.21.0"
+  }
 }
