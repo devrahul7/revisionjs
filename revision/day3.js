@@ -4,7 +4,7 @@ setTimeout(
     () => {
         console.log("Hello World");
     },
-    0 // 2 sec
+    2000 // 2 sec
 );
 
 console.log("End of the program");
@@ -104,7 +104,7 @@ const timeFunc3 = () => new Promise(
 const sequentialExecution = async () => {
     console.time("Sequential Execution");
     const result1 = await timeFunc1();
-            console.log(result1);
+    console.log(result1);
     const result2 = await timeFunc2();
     console.log(result2);
     console.timeEnd("Sequential Execution");

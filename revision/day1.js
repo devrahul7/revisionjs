@@ -8,6 +8,7 @@ age = 31; // can change
 var city = "Kathmandu"; // can be reassigned and redeclared
 var city = "Pokhara";
 city = "Lalitpur";
+
 console.log(name, age, city);
 
 // HOISTING

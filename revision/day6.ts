@@ -155,20 +155,16 @@ const gen5: Omit<Category, "title" | "isParent"> =
 console.log(gen1, gen2, gen3, gen4, gen5);
 
 // Task - fill the data
-const t1: Required<Pick<Category, "title" | "id">> = { 
+// const t1: Required< Pick<Category, "title" | "id"> > = { 
 
-    title: "Electronics" , id:1
+// };
 
-};
-
-const t2: Omit<Pick<Category, "title" | "id">, "status"> ={
+// const t2: Omit< Pick<Category, "title" | "id" | "status">, "status" > ={
     
-    title : "Education" ,id:2
-}
-const t3: Pick<Omit<Category, "isParent">, "title" | "status"> & {
-    price: number | number[];
-    description: string | string[] | ProductType;
-} = {
-    title: "groceries", status: "available"
-    ,price: [200,111],description: "freeze" 
-} 
+// }
+// const t3: Pick< Omit<Category, "isParent">, "title" | "status" > & {
+//     price: number | number[];
+//     description: string | string[] | ProductType;
+// } = {
+
+// }

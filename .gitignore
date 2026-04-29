@@ -1,34 +1,16 @@
-# dependencies (bun install)
-node_modules
-
-# output
-out
-dist
-*.tgz
-
-# code coverage
-coverage
-*.lcov
-
-# logs
-logs
-_.log
-report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
-
-# dotenv environment variable files
+# Environment variables
 .env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+.env.*
+!.env.example
 
-# caches
-.eslintcache
-.cache
-*.tsbuildinfo
+# Dependencies
+/node_modules
 
-# IntelliJ based IDEs
-.idea
+# TypeScript build output
+/dist
 
-# Finder (MacOS) folder config
+# OS generated files
 .DS_Store
+
+# Test coverage
+/coverage
