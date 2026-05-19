@@ -14,5 +14,6 @@ router.get("/get/all", personController.getAllPersons);
 // and return created person
 // Implement and test in postman
 router.post("/create/person/new", personController.createPerson);
+router.post("/update/person/new", personController.createPerson);
 
 export default router;

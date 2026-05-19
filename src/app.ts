@@ -1,5 +1,6 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import personRoutes from "./routes/person.route";
+import productRoutes from "./routes/product.route";
 import { HttpException } from "./exceptions/http-exception";
 import { ApiResponseHelper } from "./utils/api.helper.utils";
 
@@ -10,6 +11,11 @@ app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded
 app.use(
     "/api/persons", // base path/prefix
     personRoutes // router object
+)
+
+app.use(
+    "/api/products", // base path/prefix
+    productRoutes // router object
 )
 
 const PORT: number = 8089;
@@ -24,6 +30,11 @@ const dataset: Person[] = [
     { id: 2, name: "Hari", age: 25 },
     { id: 3, name: "Bob", age: 35 }
 ];
+// const dataset: Product[] = [
+//     { id: "1", name: "Ram"},
+//     { id: "2", name: "Har" },
+//     { id: "3", name: "Bob" }
+// ];
 // 1. Get All - persons
 app.get("/api/persons", (req: Request, res: Response) => {  
     // later paginated
@@ -50,6 +61,8 @@ app.post("/api/persons", (req: Request, res: Response) => {
     dataset.push(newPerson); // add to dataset
     return res.json(newPerson); // 
 });
+
+
 
 // 4. Update One Person
 // 4.1 put -> full update/most update
