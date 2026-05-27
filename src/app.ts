@@ -1,9 +1,9 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import personRoutes from "./routes/person.route";
-import productRoutes from "./routes/product.route";
 import { HttpException } from "./exceptions/http-exception";
 import { ApiResponseHelper } from "./utils/api.helper.utils";
-
+import userRouter from "./routes/user.route";
+ 
 const app: Application = express();
 app.use(express.json()); // json input
 app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded
@@ -13,10 +13,8 @@ app.use(
     personRoutes // router object
 )
 
-app.use(
-    "/api/products", // base path/prefix
-    productRoutes // router object
-)
+
+app.use("/api/v1/auth",userRouter); //confused whether routes or router 
 
 const PORT: number = 8089;
 
