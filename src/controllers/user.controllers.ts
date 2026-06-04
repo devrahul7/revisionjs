@@ -1,7 +1,7 @@
 import { UserService } from "../services/user.service";
 import { z } from "zod";
 import { CreateUserDTO, LoginUserDTO } from "../dtos/user.dto";
-import { ApiResponseHelper } from "../utils/api.helper.utils";
+import { ApiResponseHelper } from "../utils/apihelper.util";
 import { Request, Response } from "express";
 const userService = new UserService();
 

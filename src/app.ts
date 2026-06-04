@@ -1,10 +1,18 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import personRoutes from "./routes/person.route";
 import { HttpException } from "./exceptions/http-exception";
-import { ApiResponseHelper } from "./utils/api.helper.utils";
+import { ApiResponseHelper } from "./utils/apihelper.util";
 import userRouter from "./routes/user.route";
+import adminUserRouter from "./routes/admin/user.route";
+import { success } from "zod";
  
 const app: Application = express();
+
+const corsOptions = {
+    origin: ["*"], // ["http://localhost:3000, http://example.com"]
+    successStatus: 200
+}
+app.use(cors(corsOptions)); //enablr CORS for all routes
 app.use(express.json()); // json input
 app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded
 
@@ -15,6 +23,7 @@ app.use(
 
 
 app.use("/api/v1/auth",userRouter); //confused whether routes or router 
+app.use("/api/v1/admin/users",adminUserRouter); //confused whether routes or router 
 
 const PORT: number = 8089;
 
@@ -177,3 +186,10 @@ export {
 
 // default export - only one default export per file
 export default app;
+
+function cors(corsOptions: {
+    origin: string[]; // ["http://localhost:3000, http://example.com"]
+    successStatus: number;
+}): any {
+    throw new Error("Function not implemented.");
+}
