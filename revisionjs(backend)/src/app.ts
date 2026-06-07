@@ -1,4 +1,5 @@
 import express, { Application, NextFunction, Request, Response } from "express";
+import cors from "cors";
 import personRoutes from "./routes/person.route";
 import { HttpException } from "./exceptions/http-exception";
 import { ApiResponseHelper } from "./utils/apihelper.util";
@@ -187,9 +188,4 @@ export {
 // default export - only one default export per file
 export default app;
 
-function cors(corsOptions: {
-    origin: string[]; // ["http://localhost:3000, http://example.com"]
-    successStatus: number;
-}): any {
-    throw new Error("Function not implemented.");
-}
+
