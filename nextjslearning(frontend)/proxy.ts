@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getTokenCookie, getUserData } from "@/lib/cookies";
 const publicRoutes = ["/login", "/register"];
-const adminRoutes = ["/dashboard", "/admin"];
+const adminRoutes = [ "/admin"];
 export async function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
     const token = await getTokenCookie();

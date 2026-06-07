@@ -1,7 +1,7 @@
 export default function AdminPage() {
     return (
         <div>
-            Only admin can see this page
+            Only Admin can see this page
         </div>
     );
 }

@@ -2,7 +2,6 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 import { clearAuthCookies, getTokenCookie, getUserData } from "../cookies";
 import { useRouter } from "next/navigation";
-
 interface AuthContextProps {
     isAuthenticated: boolean;
     setIsAuthenticated: (value: boolean) => void;
@@ -12,10 +11,7 @@ interface AuthContextProps {
     loading: boolean;
     checkAuth: () => Promise<void>;
 }
-
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
-
-
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState<any>(null);
